@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: sentiment-analysis
+  labels:
+    app: sentiment-analysis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sentiment-analysis
+  template:
+    metadata:
+      labels:
+        app: sentiment-analysis
+    spec:
+      containers:
+        - name: sentiment-analysis
+          image: sameerrrrr/sentimentanalysis-streamlit:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8501
+          # env:
+          #   - name: 
+          #     value: sentimentanalysis
+      #     volumeMounts:
+      #       - name: workdir
+      #         mountPath: /app
+      # volumes:
+      #     - name: workdir
+      #       emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: sentiment-analysis-service
+    labels:
+      app: sentiment-analysis
+spec:
+    type: NodePort
+    selector:
+      app: sentiment-analysis
+    ports:
+      - name: http
+        port: 8501
+        targetPort: 8501
+        nodePort: 30088 
