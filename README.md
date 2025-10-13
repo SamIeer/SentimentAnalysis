@@ -123,14 +123,14 @@ docker run -p 8501:8501 sentiment-app
 </pre>
 <hr>
 <ul>
-## 📊 Results
+<h1>📊 Results</h1>
 <li>Logistic Regression achieved ~85% accuracy on validation data</li>
 <li>Clean UI for sentiment prediction</li>
 <li>Fully automated CI/CD pipeline with Docker integration</li>
 </ul>
 <hr>
 <ul>
-##Key Takeaways
+<h1>Key Takeaways</h1>
   <li>Built a complete ML workflow: from preprocessing → training → deployment</li>
   <li>Learned to ensure preprocessing consistency between training & inference</li>
   <li>Containerized the app for reproducibility</li>
@@ -138,7 +138,7 @@ docker run -p 8501:8501 sentiment-app
   <li>Gained experience with MLOps fundamentals</li>
 </ul>
 <hr>
-##Setup Instructions
+<h1>Setup Instructions</h1>
 <pre>
 ## Clone repo
 git clone https://github.com/<your-username>/sentiment-analysis.git
@@ -151,7 +151,7 @@ streamlit run app.py
 <h3>or run in Docker:</h3>
 <pre>docker-compose up --build</pre>
 <hr>
-##Author
+<h1>Author</h1>
 <h2>Sameer Chauhan</h2>
 <h5>MLOps & Machine Learning Engineer</h5>
 <h5>💼 Passionate about bridging ML with real-world deployment through Docker, CI/CD, and automation.</h5>
