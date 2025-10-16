@@ -1,4 +1,3 @@
-versions: "3.11"
 services:
     streamlit:
           container_name: sentiment-analysis
@@ -10,4 +9,3 @@ services:
           environment:
             - STREAMLIT_SERVER_PORT=8501
             - STREAMLIT_SERVER_ADDRESS=0.0.0.0
-            
